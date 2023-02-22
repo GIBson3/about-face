@@ -185,7 +185,7 @@ export function drawAboutFaceIndicator(token) {
 			else if (indicatorState == IndicatorMode.HOVER) token.aboutFaceIndicator.graphics.visible = token.hover;
 			else if (indicatorState == IndicatorMode.ALWAYS) token.aboutFaceIndicator.graphics.visible = true;
 		} catch (error) {
-			console.error(`About Face | Error drawing the indicator for token ${token.name} (ID: ${token.id}, Type: ${token.document?.actor?.type ?? null})`, error);
+			console.error(`About Face | Error drawing the indicator for token ${token?.name ?? 'undefined'} (ID: ${token?.id ?? 'undefined'}, Type: ${token?.document?.actor?.type ?? null})`, error);
 		}
 	}
 }
